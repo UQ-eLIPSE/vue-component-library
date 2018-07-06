@@ -7,8 +7,15 @@
 </template>
 
 <script>
+import FlockBanner from "./Banner";
+import FlockButton from "./Button";
+
 export default {
   name: "HelloWorld",
+  components: {
+    FlockBanner,
+    FlockButton
+  },
   data() {
     return {
       msg: "Welcome to Your Vue.js App"

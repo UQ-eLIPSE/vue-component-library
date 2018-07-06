@@ -32,3 +32,19 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.banner {
+  padding: 12px;
+  background-color: #fcf6cd;
+  color: #f6a623;
+  text-align: left;
+  position: fixed;
+  z-index: 2;
+}
+.banner__top {
+  top: 0;
+}
+.banner__bottom {
+  bottom: 0;
+}
+</style>
