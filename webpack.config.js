@@ -60,10 +60,8 @@ module.exports = {
     }
   },
   devServer: {
-    contentBase: './dist',
     historyApiFallback: true,
-    noInfo: true,
-    publicPath: '/dist/'
+    noInfo: true
   },
   performance: {
     hints: false
