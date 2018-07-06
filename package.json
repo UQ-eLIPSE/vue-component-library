@@ -1,0 +1,34 @@
+{
+  "name": "vue-component-library",
+  "version": "0.0.1",
+  "description": "Library of Vue components adhering to eLIPSE design system",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-serve ./webpack.config.js --open --port 9000",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UQ-eLIPSE/vue-component-library.git"
+  },
+  "author": "eLIPSE; The University of Queensland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UQ-eLIPSE/vue-component-library/issues"
+  },
+  "homepage": "https://github.com/UQ-eLIPSE/vue-component-library#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "webpack-serve": "^1.0.4"
+  }
+}
