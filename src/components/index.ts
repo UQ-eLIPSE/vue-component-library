@@ -1,15 +1,15 @@
-// import Vue from "vue";
+import Vue from "vue";
 
-// import FlockButton from "./Button.vue";
-// import FlockBanner from "./Banner.vue";
+import FlockButton from "./Button.vue";
+import FlockBanner from "./Banner.vue";
 
-// const Components = {
-//   FlockButton,
-//   FlockBanner
-// };
+const Components:any = {
+  FlockButton,
+  FlockBanner
+};
 
-// Object.keys(Components).forEach(name => {
-//   Vue.component(name, Components[name]);
-// });
+Object.keys(Components).forEach(name => {
+  Vue.component(name, Components[name]);
+});
 
-// export default Components;
+export default Components;

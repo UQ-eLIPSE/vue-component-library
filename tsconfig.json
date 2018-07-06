@@ -4,11 +4,7 @@
       "sourceMap": true,
       "strict": true,
       "noImplicitReturns": true,
-      "module": "es2015",
-      "moduleResolution": "node",
+      "module": "commonjs",
       "target": "es5"
-  },
-  "include": [
-      "./src/**/*"
-  ]
+  }
 }
