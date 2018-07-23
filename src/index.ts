@@ -1,13 +1,16 @@
 import Vue from "vue";
-import App from "./App.vue";
-import "./components";
+import Banner from "./components/Banner.vue";
+import Button from "./components/Button.vue";
+import SimpleButton from "./components/SimpleButton.vue";
 
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
-  el: "#app",
-  components: { App },
-  template: "<App/>"
+  components: {
+    Banner,
+    Button,
+    SimpleButton
+  }
 });
 
