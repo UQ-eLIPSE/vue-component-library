@@ -1,20 +1,23 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <FlockBanner>This is a banner!</FlockBanner>
-    <FlockButton>Submit</FlockButton>
+    <Banner>This is a banner!</Banner>
+    <Button>Submit</Button>
+    <SimpleButton>Hello</SimpleButton>
   </div>
 </template>
 
 <script>
-import FlockBanner from "./Banner";
-import FlockButton from "./Button";
+import Banner from "./Banner";
+import Button from "./Button";
+import SimpleButton from "./SimpleButton";
 
 export default {
   name: "HelloWorld",
   components: {
-    FlockBanner,
-    FlockButton
+    Banner,
+    Button,
+    SimpleButton
   },
   data() {
     return {
