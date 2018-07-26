@@ -2,6 +2,7 @@
   "name": "vue-component-library",
   "version": "0.0.3",
   "main": "dist/build.js",
+  "types": "dist/src/index.d.ts",
   "description": "Library of Vue components adhering to eLIPSE design system",
   "scripts": {
     "build": "webpack",
@@ -14,9 +15,6 @@
   },
   "author": "eLIPSE; The University of Queensland",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/UQ-eLIPSE/vue-component-library/issues"
-  },
   "homepage": "https://github.com/UQ-eLIPSE/vue-component-library#readme",
   "devDependencies": {
     "css-loader": "^0.28.11",
