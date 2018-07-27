@@ -16,6 +16,7 @@
 </template>
 <script>
 export default {
+  name: 'VButton',
   props: {
     size: {
       default: "auto",

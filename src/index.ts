@@ -1,16 +1,13 @@
-import Vue from "vue";
-import Banner from "./components/Banner.vue";
-import Button from "./components/Button.vue";
-import SimpleButton from "./components/SimpleButton.vue";
+import VBanner from "./components/VBanner"
+import VButton from "./components/VButton"
+import VSimpleButton from "./components/VSimpleButton"
 
-Vue.config.productionTip = false;
-
-/* eslint-disable no-new */
-new Vue({
-  components: {
-    Banner,
-    Button,
-    SimpleButton
+export default {
+  install (Vue : any) {
+    Vue.component('vbanner', VBanner);
+    Vue.component('vbutton', VButton);
+    Vue.component('vsimplebutton', VSimpleButton);
   }
-});
+}
 
+export { VBanner, VButton, VSimpleButton };
