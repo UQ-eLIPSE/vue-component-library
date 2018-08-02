@@ -1,5 +1,5 @@
 {
-  "name": "vue-component-library",
+  "name": "@uq-elipse/vue-component-library",
   "version": "0.0.4",
   "main": "dist/build.js",
   "types": "dist/src/index.d.ts",

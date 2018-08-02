@@ -1,0 +1,6 @@
+# Don't include typescript files
+src
+
+tsconfig.json
+package-lock.json
+webpack.config.js
