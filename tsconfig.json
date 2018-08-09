@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
       "strict": true,
-      "module": "commonjs",
+      "module": "es2015",
       "target": "es5",
-      "declaration": true,
-      "outDir": "./dist"
+      "moduleResolution": "node",
+    //   "declaration": true,
+      "sourceMap": true,
+      "outDir": "../dist"
   },
   "include": [
-      "src/**/*"
+      "./src/**/*"
   ],
+  "exclude": [
+      "node_modules"
+  ]
 }

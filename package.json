@@ -1,12 +1,12 @@
 {
   "name": "@uq-elipse/vue-component-library",
   "version": "0.0.7",
-  "main": "dist/build.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/bundle.js",
   "description": "Library of Vue components adhering to eLIPSE design system",
   "scripts": {
     "build": "webpack",
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "webpack-serve ./webpack.config.js --open --port 9000",
     "watch": "webpack --watch"
   },
   "repository": {
@@ -26,7 +26,8 @@
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.14.0",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^2.0.2"
   },
   "dependencies": {
     "hoek": "^4.2.1"
