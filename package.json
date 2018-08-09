@@ -1,6 +1,6 @@
 {
   "name": "@uq-elipse/vue-component-library",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/bundle.js",
   "description": "Library of Vue components adhering to eLIPSE design system",
   "scripts": {
