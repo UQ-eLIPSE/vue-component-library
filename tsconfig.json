@@ -4,7 +4,7 @@
       "module": "es2015",
       "target": "es5",
       "moduleResolution": "node",
-    //   "declaration": true,
+      "declaration": true,
       "sourceMap": true,
       "outDir": "../dist"
   },

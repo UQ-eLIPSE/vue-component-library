@@ -3,9 +3,12 @@ var webpack = require('webpack')
 var VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  entry: './src/index.ts',
-  devtool: 'inline-source-map',
+  entry: {
+    app: './src/index.ts'
+  },
   output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
     filename: 'bundle.js'
   },
   module: {
@@ -50,9 +53,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin()
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.vue', '.json']
-  }
+    extensions: ['.ts', '.js', '.vue', '.json'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
+  devtool: 'inline-source-map'
 }
+
