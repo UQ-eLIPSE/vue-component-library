@@ -20,6 +20,12 @@ const VueComponentLibrary: VueComponentPlugin = {
     (<any>Object).values(components).forEach((component: any) => {
       Vue.use(component);
     })
+    
+    Vue.mixin({
+      mounted() {
+        console.log('Mounted!');
+      }
+    })
 
   }
 };

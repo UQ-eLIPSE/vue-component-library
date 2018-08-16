@@ -1,5 +1,5 @@
-import { VueConstructor } from "vue";
-import VButton from './VButton.vue';
+import Vue, { VueConstructor } from "vue";
+import VButton from '../VButton';
 
 const Plugin = {
     install(Vue: VueConstructor) {

@@ -1,5 +1,5 @@
-import { VueConstructor } from "vue";
-import VBanner from './VBanner.vue';
+import Vue, { VueConstructor } from "vue";
+import VBanner from '../VBanner';
 
 const Plugin = {
     install(Vue: VueConstructor) {

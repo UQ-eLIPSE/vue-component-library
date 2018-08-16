@@ -1,5 +1,5 @@
-import { VueConstructor } from "vue";
-import VSimpleButton from './VSimpleButton.vue';
+import Vue, { VueConstructor } from "vue";
+import VSimpleButton from '../VSimpleButton';
 
 const Plugin = {
     install(Vue: VueConstructor) {
