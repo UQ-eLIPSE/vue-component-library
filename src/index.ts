@@ -1,33 +1,18 @@
-import VBanner from "./components/VBanner"
-import VButton from "./components/VButton"
-import VSimpleButton from "./components/VSimpleButton"
+import { VueConstructor, PluginFunction } from "vue";
+import VBanner from "./components/VBanner";
+import VButton from "./components/VButton";
+import VSimpleButton from "./components/VSimpleButton";
 
-export default {
-  install (Vue : any) {
-    Vue.component('vbanner', VBanner);
-    Vue.component('vbutton', VButton);
-    Vue.component('vsimplebutton', VSimpleButton);
-  }
+export interface VueComponentPlugin {
+  install: PluginFunction<void>
 }
 
-export { VBanner, VButton, VSimpleButton };
+const VueComponentLibrary: VueComponentPlugin = {
+  install (Vue: VueConstructor): void {
+    Vue.component('v-banner', VBanner);
+    Vue.component('v-button', VButton);
+    Vue.component('v-simplebutton', VSimpleButton);
+  }
+};
 
-
-// import Vue from "vue";
-// import VSimpleButton from "./components/VSimpleButton"
-
-// let v = new Vue({
-//     el: "#app",
-//     template: `
-//     <div>
-//         <div>Hello {{name}}!</div>
-//         Name: <input v-model="name" type="text">
-//         <VSimpleButton/>
-//     </div>`,
-//     data: {
-//         name: "World"
-//     },
-//     components: {
-//       VSimpleButton
-//     }
-// });
+export default VueComponentLibrary;
