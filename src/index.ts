@@ -21,11 +21,7 @@ const VueComponentLibrary: VueComponentPlugin = {
       Vue.use(component);
     })
     
-    Vue.mixin({
-      mounted() {
-        console.log('Mounted!');
-      }
-    })
+    console.log("Hello the vue component plugin installed");
 
   }
 };
