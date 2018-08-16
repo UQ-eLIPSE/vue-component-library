@@ -1,11 +1,13 @@
-import Vue, { VueConstructor } from "vue";
-import VSimpleButton from '../VSimpleButton';
+// import Vue, { VueConstructor } from "vue";
+// import VSimpleButton from '../VSimpleButton';
 
-const Plugin = {
-    install(Vue: VueConstructor) {
-        Vue.component("v-simplebutton", VSimpleButton);
-        console.log("Hello the simplebutton plugin installed");
-    }
-}
+// const Plugin = {
+//     install(Vue: VueConstructor) {
+//         Vue.component("v-simplebutton", VSimpleButton);
+//     }
+// }
 
-export default Plugin
+// export default Plugin
+
+import VSimpleButton from './VSimpleButton.vue';
+export default VSimpleButton;
