@@ -11,7 +11,9 @@ module.exports = {
     filename: 'bundle.js',
     libraryTarget: 'umd',
     library: 'VueComponentLibrary',
-    umdNamedDefine: true
+    libraryExport: 'default',
+    // https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/build/webpack.prod.config.js
+    globalObject: 'typeof self !== \'undefined\' ? self : this'
   },
   module: {
     rules: [
