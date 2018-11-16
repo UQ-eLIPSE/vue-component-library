@@ -1,15 +1,16 @@
-var path = require('path')
-var webpack = require('webpack')
-var VueLoaderPlugin = require('vue-loader/lib/plugin')
+const path = require('path')
+const webpack = require('webpack')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: {
     app: './src/index.ts'
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, '/dist/'),
+    filename: 'bundle.js',
+    libraryTarget: 'window',
+    library: 'vue-component-library'
   },
   module: {
     rules: [

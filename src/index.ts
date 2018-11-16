@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import VBanner from "./components/VBanner"
 import VButton from "./components/VButton"
 import VSimpleButton from "./components/VSimpleButton"
@@ -9,8 +10,6 @@ export default {
     Vue.component('vsimplebutton', VSimpleButton);
   }
 }
-
-export { VBanner, VButton, VSimpleButton };
 
 
 // import Vue from "vue";
