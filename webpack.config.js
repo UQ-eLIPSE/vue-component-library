@@ -7,10 +7,11 @@ module.exports = {
     app: './src/index.ts'
   },
   output: {
-    path: path.resolve(__dirname, '/dist/'),
+    path: path.resolve(__dirname, '../dist/'),
     filename: 'bundle.js',
-    libraryTarget: 'window',
-    library: 'vue-component-library'
+    libraryTarget: 'umd',
+    library: 'VueComponentLibrary',
+    umdNamedDefine: true
   },
   module: {
     rules: [
