@@ -37,7 +37,8 @@ export default {
   text-align: center;
   text-transform: capitalize;
   transition: all 0.1s ease-in-out;
-  background: #f8afcd;
+  // background: #f8afcd;
+  background: #f80fcd;
   outline: none;
   position: relative;
   &.full {
@@ -45,7 +46,8 @@ export default {
   }
   &.primary {
     &:active {
-      background: #f8afcd;
+      // background: #f8afcd;
+      background: #f80fcd;
     }
   }
 }
