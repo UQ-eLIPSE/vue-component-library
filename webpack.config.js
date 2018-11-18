@@ -11,9 +11,6 @@ module.exports = {
         filename: 'bundle.js',
         libraryTarget: 'umd',
         library: 'VueComponentLibrary',
-        // libraryExport: 'default',
-        // https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/build/webpack.prod.config.js
-        // globalObject: 'typeof self !== \'undefined\' ? self : this'
     },
     module: {
         rules: [
@@ -28,7 +25,6 @@ module.exports = {
                         'scss': 'vue-style-loader!css-loader!sass-loader',
                         'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
                     }
-                    // other vue-loader options go here
                 }
             },
             {
@@ -56,6 +52,7 @@ module.exports = {
             }
         ]
     },
+    mode: 'production',
     plugins: [
         new VueLoaderPlugin()
     ],
@@ -64,7 +61,6 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         }
-    },
-    devtool: 'inline-source-map'
+    }
 }
 

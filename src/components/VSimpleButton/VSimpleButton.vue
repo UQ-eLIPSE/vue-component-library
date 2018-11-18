@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: 'v-simple-button',
   props: {
     size: {
       default: "auto",

@@ -11,7 +11,7 @@
   };
 
   export default {
-    name: 'VBanner',
+    name: 'v-banner',
     props: {
       position: {
         type: String,
