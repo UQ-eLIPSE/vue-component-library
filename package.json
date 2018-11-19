@@ -5,7 +5,9 @@
   "description": "Library of Vue components adhering to eLIPSE design system",
   "scripts": {
     "build": "webpack",
-    "clean": "rm -rfv dist"
+    "clean": "rm -rfv dist",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "typescript": "^2.9.2",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.2",
+    "vue-styleguidist": "^1.9.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
