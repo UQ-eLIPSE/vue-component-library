@@ -109,22 +109,7 @@ p {
 // }
 
 
-// font sizes
-$normal: 1em;
-$small: 0.875em;
-$smaller: 0.75em;
-$large: 1.125em;
-$larger: 1.25em;
 
-$border-color: #b2b2b2;
-$border-grey-light: #eeeeee;
-$gray: #697178;
-
-$bg-grey: #ebebeb;
-$text-color-grey: #454545;
-$button-border-color: #697178;
-$input-border-color: #dddddd;
-$error-color: #ff615b;
 
 @mixin respond-to($media) {
   @if $media==mobile {
