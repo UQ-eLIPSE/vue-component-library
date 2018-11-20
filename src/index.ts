@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Colors from "./components/Colors"
+import OtherStyling from "./components/OtherStyling"
 import Spacing from "./components/Spacing"
 import Typography from "./components/Typography"
 
@@ -11,6 +12,7 @@ import VHeader from "./components/VHeader"
 export default {
   install (Vue : any) {
     Vue.component('colors', Colors);
+    Vue.component('other-styling', OtherStyling);
     Vue.component('spacing', Spacing);
     Vue.component('typography', Typography);
     

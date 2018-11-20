@@ -169,6 +169,46 @@ $space-xl: $base-space-value * 3;
   margin-right: $space-xl;
 }
 
+// shadows
+.shadow-light {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-dark {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+// gradients
+.horizontal-primary-gradient {
+  background: $primary;
+  background: linear-gradient(90deg, $primary 35%, $primary-dark 100%);
+}
+
+.vertical-primary-gradient {
+  background: $primary;
+  background: linear-gradient(180deg, $primary 35%, $primary-dark 100%);
+}
+
+// border styles
+.curved-border {
+  border: solid 1px $grey;
+  border-radius: 0.2rem;
+}
+
+.border-regular {
+  border: solid 1px $grey;
+}
+
+.border-bold {
+  border: solid 3px $grey;
+}
+
+
+
 
 @mixin respond-to($media) {
   @if $media==mobile {
