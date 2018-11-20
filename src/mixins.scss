@@ -27,6 +27,88 @@ $background-color: #f7f7f7;
 $white: #ffffff;
 $black: #031a24;
 
+// typography
+$base-value: 1rem;
+$scale-ratio: 1.2;
+
+$text-xs: $base-value / ($scale-ratio * $scale-ratio);
+$text-s: $base-value / $scale-ratio;
+$text-m: $base-value * $scale-ratio;
+$text-l: $base-value * $scale-ratio * $scale-ratio;
+$text-xl: $base-value * $scale-ratio * $scale-ratio * $scale-ratio;
+$text-xxl: $base-value * $scale-ratio * $scale-ratio * $scale-ratio * $scale-ratio;
+
+h1, h2, h3, p {
+  font-weight: normal;
+  font-size: $base-value;
+  color: $text-color;
+}
+
+h1 {
+  font-size: $text-xxl;
+}
+
+h2 {
+  font-size: $text-xl;
+}
+
+h3 {
+  font-size: $text-l;
+}
+
+p {
+  font-size: $text-m;
+}
+
+.font-size-s {
+  font-size: $text-s;
+}
+
+.font-size-xs {
+  font-size: $text-xs;
+}
+
+// body {
+//   font-family: 'Open Sans', sans-serif;
+//   font-size: 1rem;
+//   line-height: 1.5rem;
+//   color: $text-color;
+//   font-weight: normal;
+// }
+
+// h1, h2, h3, h4 {
+//   margin: 1.5rem 0;
+// }
+
+// h1 {
+//   font-size: calc(1rem * 1.25 * 1.25 * 1.25 * 1.25);
+//   line-height: calc(1.5rem * 3);
+// }
+
+// h2 {
+//   font-size: calc(1rem * 1.25 * 1.25 * 1.25);
+//   line-height: calc(1.5rem * 2);
+// }
+
+// h3 {
+//   font-size: calc(1rem * 1.25 * 1.25);
+// }
+
+// h4 {
+//   font-size: 1.25rem;
+// }
+
+// .small {
+//   font-size: calc(1rem / 1.25);
+//   line-height: calc(1.5rem / 2);
+// }
+
+// .xs {
+//   font-size: calc(1rem / (1.25 * 1.25));
+//   line-height: calc(1.5rem / 2);
+// }
+
+
 // font sizes
 $normal: 1em;
 $small: 0.875em;
