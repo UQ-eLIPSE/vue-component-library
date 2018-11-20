@@ -207,9 +207,7 @@ $space-xl: $base-space-value * 3;
   border: solid 3px $grey;
 }
 
-
-
-
+// mixins
 @mixin respond-to($media) {
   @if $media==mobile {
     @media only screen and (max-width: $break-small) {
@@ -235,19 +233,6 @@ $space-xl: $base-space-value * 3;
 @mixin vertical-center() {
   display: flex;
   align-items: center;
-}
-
-@mixin text-color() {
-  color: $text-color;
-}
-
-@mixin light-grey() {
-  @include text-color();
-  opacity: 0.6;
-}
-
-@mixin border($direction: bottom, $borderWidth: 1px, $border-color: #f3f3f3) {
-  border-#{$direction}: solid $borderWidth $border-color;
 }
 
 @mixin absolute-right() {
@@ -284,36 +269,6 @@ $space-xl: $base-space-value * 3;
   border-bottom: solid 2px $caret-color;
 }
 
-@mixin background($url, $size: cover) {
-  background-image: url($url);
-  background-size: $size;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@mixin border-radius($radius: 4px) {
-  border-radius: $radius;
-}
-
-@mixin round-border() {
-  border-radius: 50%;
-}
-
-@mixin ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-@mixin bg-cover($backgroundImage: "", $size: contain) {
-  background-image: $backgroundImage;
-  background-repeat: no-repeat;
-  background-size: $size;
-}
-
 .dib {
   display: inline-block;
-}
-.semi-bold {
-  font-weight: 500;
 }

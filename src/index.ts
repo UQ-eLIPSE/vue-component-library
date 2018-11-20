@@ -1,24 +1,18 @@
 import Vue from 'vue'
-import Colors from "./components/Colors"
-import OtherStyling from "./components/OtherStyling"
-import Spacing from "./components/Spacing"
-import Typography from "./components/Typography"
+import _Colors from "./components/_Colors"
+import _OtherStyling from "./components/_OtherStyling"
+import _Spacing from "./components/_Spacing"
+import _Typography from "./components/_Typography"
 
-import VBanner from "./components/VBanner"
-import VButton from "./components/VButton"
-import VSimpleButton from "./components/VSimpleButton"
-import VHeader from "./components/VHeader"
+import Header from "./components/Header"
 
 export default {
   install (Vue : any) {
-    Vue.component('colors', Colors);
-    Vue.component('other-styling', OtherStyling);
-    Vue.component('spacing', Spacing);
-    Vue.component('typography', Typography);
+    Vue.component('colors', _Colors);
+    Vue.component('other-styling', _OtherStyling);
+    Vue.component('spacing', _Spacing);
+    Vue.component('typography', _Typography);
     
-    Vue.component('v-banner', VBanner);
-    Vue.component('v-button', VButton);
-    Vue.component('v-simple-button', VSimpleButton);
-    Vue.component('v-header', VHeader);
+    Vue.component('v-header', Header);
   }
 }
