@@ -1,8 +1,8 @@
 <template>
     <div class="v-bg">
-        <label class="v-label">
+        <h1 class="v-label">
             {{ this.label }}
-        </label>
+        </h1>
         <!-- <img src="../../assets/elipse-logo.png"> -->
         eLIPSE logo
     </div>
@@ -21,9 +21,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../mixins.scss";
+
 .v-bg {
-    background: rgb(0,132,132);
-    background: linear-gradient(90deg, rgba(0,132,132,1) 35%, rgba(0,81,81,1) 100%);
+    background: $primary;
+    background: linear-gradient(90deg, $primary 35%, $primary-dark 100%);
     width: 100%;
     height: 7.5rem;
     display: flex;
@@ -34,8 +36,7 @@ export default {
 }
 
 .v-label {
-    color: white;
-    font-size: 2.5rem;
+    color: $white;
 }
 
 </style>

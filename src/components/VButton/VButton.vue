@@ -89,7 +89,7 @@ export default {
     }
   }
   &.secondary {
-    color: $dark-text-color;
+    color: $text-color;
     background: $secondary;
     &:active {
       background: $secondary-dark;
@@ -107,16 +107,16 @@ export default {
     }
   }
   &.destructive {
-    background: $destructive;
+    background: $danger;
     &:active {
-      background: $destructive-dark;
+      background: $danger-dark;
     }
     &:hover {
-      @include onHover($destructive-dark);
+      @include onHover($danger-dark);
     }
     &.invert {
-      color: $destructive;
-      border-color: $destructive;
+      color: $danger;
+      border-color: $danger;
       &:active {
         color: white;
       }
