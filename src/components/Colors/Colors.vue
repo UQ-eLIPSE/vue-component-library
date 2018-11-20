@@ -1,53 +1,53 @@
 <template>
-    <div class="outerContainer">
-        <div class="col">
-            <div class="b"></div>
-            <div class="b primary-lighter">primary-lighter #C8FFFF</div>
-            <div class="b primary-light">primary-light #00C8C8</div>
-            <div class="b primary">primary #008484</div>
-            <div class="b primary-dark">primary-dark #005151</div>
+    <div class="outerContainer inset-m">
+        <div class="col stack-m">
+            <div class="b stack-s inline-s"></div>
+            <div class="b primary-lighter stack-s inline-s">primary-lighter #C8FFFF</div>
+            <div class="b primary-light stack-s inline-s">primary-light #00C8C8</div>
+            <div class="b primary stack-s inline-s">primary #008484</div>
+            <div class="b primary-dark stack-s inline-s">primary-dark #005151</div>
         </div>
-        <div class="col">
-            <div class="b"></div>
-            <div class="b secondary-lighter">secondary-lighter #E7E6F6</div>
-            <div class="b secondary-light">secondary-light #A09CDA</div>
-            <div class="b secondary">secondary #716BC7</div>
-            <div class="b secondary-dark">secondary-dark #4E46B9</div>
+        <div class="col stack-m">
+            <div class="b stack-s inline-s"></div>
+            <div class="b secondary-lighter stack-s inline-s">secondary-lighter #E7E6F6</div>
+            <div class="b secondary-light stack-s inline-s">secondary-light #A09CDA</div>
+            <div class="b secondary stack-s inline-s">secondary #716BC7</div>
+            <div class="b secondary-dark stack-s inline-s">secondary-dark #4E46B9</div>
         </div>
-        <div class="col">
-            <div class="b"></div>
-            <div class="b danger-lighter">danger-lighter #F8D7D7</div>
-            <div class="b danger-light">danger-light #E88181</div>
-            <div class="b danger">danger #DB3939</div>
-            <div class="b danger-dark">danger-dark #B02020</div>
+        <div class="col stack-m">
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s danger-lighter">danger-lighter #F8D7D7</div>
+            <div class="b stack-s inline-s danger-light">danger-light #E88181</div>
+            <div class="b stack-s inline-s danger">danger #DB3939</div>
+            <div class="b stack-s inline-s danger-dark">danger-dark #B02020</div>
         </div>
-        <div class="col">
-            <div class="b"></div>
-            <div class="b warning-lighter">warning-lighter #F9F0CF</div>
-            <div class="b warning-light">warning-light #F1DD92</div>
-            <div class="b warning">warning #E8C547</div>
-            <div class="b warning-dark">warning-dark #D1A91A</div>
+        <div class="col stack-m">
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s warning-lighter">warning-lighter #F9F0CF</div>
+            <div class="b stack-s inline-s warning-light">warning-light #F1DD92</div>
+            <div class="b stack-s inline-s warning">warning #E8C547</div>
+            <div class="b stack-s inline-s warning-dark">warning-dark #D1A91A</div>
         </div>
-        <div class="col">
-            <div class="b background-color">background-color #F7F7F7</div>
-            <div class="b text-disabled">text-disabled #C9CBCC</div>
-            <div class="b text-color-light">text-color-light #94989B</div>
-            <div class="b grey">grey #6A6E70</div>
-            <div class="b text-color">text-color #515456</div>
+        <div class="col stack-m">
+            <div class="b stack-s inline-s background-color">background-color #F7F7F7</div>
+            <div class="b stack-s inline-s text-disabled">text-disabled #C9CBCC</div>
+            <div class="b stack-s inline-s text-color-light">text-color-light #94989B</div>
+            <div class="b stack-s inline-s grey">grey #6A6E70</div>
+            <div class="b stack-s inline-s text-color">text-color #515456</div>
         </div>
-        <div class="col">
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b white">white #FFFFFF</div>
-            <div class="b"></div>
+        <div class="col stack-m">
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s white">white #FFFFFF</div>
+            <div class="b stack-s inline-s"></div>
         </div>
-        <div class="col">
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b"></div>
-            <div class="b black">black #031A24</div>
-            <div class="b"></div>
+        <div class="col stack-m">
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s"></div>
+            <div class="b stack-s inline-s black">black #031A24</div>
+            <div class="b stack-s inline-s"></div>
         </div>
     </div>
 </template>
@@ -63,7 +63,6 @@ export default {
 
 .outerContainer {
     background: $white;
-    padding: 1rem;
     margin: 1rem;
     display: flex;
     justify-content: space-between;
@@ -76,14 +75,11 @@ export default {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    margin-bottom: 1rem;
 }
 
 .b {
     width: 9rem;
     height: 4rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;

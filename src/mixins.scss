@@ -28,20 +28,22 @@ $white: #ffffff;
 $black: #031a24;
 
 // typography
-$base-value: 1rem;
+$base-type-value: 1rem;
 $scale-ratio: 1.2;
 
-$text-xs: $base-value / ($scale-ratio * $scale-ratio);
-$text-s: $base-value / $scale-ratio;
-$text-m: $base-value * $scale-ratio;
-$text-l: $base-value * $scale-ratio * $scale-ratio;
-$text-xl: $base-value * $scale-ratio * $scale-ratio * $scale-ratio;
-$text-xxl: $base-value * $scale-ratio * $scale-ratio * $scale-ratio * $scale-ratio;
+$text-xs: $base-type-value / ($scale-ratio * $scale-ratio);
+$text-s: $base-type-value / $scale-ratio;
+$text-m: $base-type-value * $scale-ratio;
+$text-l: $base-type-value * $scale-ratio * $scale-ratio;
+$text-xl: $base-type-value * $scale-ratio * $scale-ratio * $scale-ratio;
+$text-xxl: $base-type-value * $scale-ratio * $scale-ratio * $scale-ratio * $scale-ratio;
 
 h1, h2, h3, p {
   font-weight: normal;
-  font-size: $base-value;
+  font-size: $base-type-value;
+  line-height: $base-type-value * 1.5;
   color: $text-color;
+  margin: 0;
 }
 
 h1 {
@@ -68,47 +70,104 @@ p {
   font-size: $text-xs;
 }
 
-// body {
-//   font-family: 'Open Sans', sans-serif;
-//   font-size: 1rem;
-//   line-height: 1.5rem;
-//   color: $text-color;
-//   font-weight: normal;
-// }
+// spacing
+$base-space-value: 1.5rem;
 
-// h1, h2, h3, h4 {
-//   margin: 1.5rem 0;
-// }
+$space-xs: $base-space-value / 3;
+$space-s: $base-space-value / 2;
+$space-m: $base-space-value;
+$space-l: $base-space-value * 2;
+$space-xl: $base-space-value * 3;
 
-// h1 {
-//   font-size: calc(1rem * 1.25 * 1.25 * 1.25 * 1.25);
-//   line-height: calc(1.5rem * 3);
-// }
+.inset-xs {
+  box-sizing: border-box;
+  padding: $space-xs;
+}
 
-// h2 {
-//   font-size: calc(1rem * 1.25 * 1.25 * 1.25);
-//   line-height: calc(1.5rem * 2);
-// }
+.inset-s {
+  box-sizing: border-box;
+  padding: $space-s;
+}
 
-// h3 {
-//   font-size: calc(1rem * 1.25 * 1.25);
-// }
+.inset-m {
+  box-sizing: border-box;
+  padding: $space-m;
+}
 
-// h4 {
-//   font-size: 1.25rem;
-// }
+.inset-l {
+  box-sizing: border-box;
+  padding: $space-l;
+}
 
-// .small {
-//   font-size: calc(1rem / 1.25);
-//   line-height: calc(1.5rem / 2);
-// }
+.inset-xl {
+  box-sizing: border-box;
+  padding: $space-xl;
+}
 
-// .xs {
-//   font-size: calc(1rem / (1.25 * 1.25));
-//   line-height: calc(1.5rem / 2);
-// }
+.inset-squish-s {
+  box-sizing: border-box;
+  padding: $space-xs $space-s;
+}
 
+.inset-squish-m {
+  box-sizing: border-box;
+  padding: $space-s $space-m;
+}
 
+.inset-squish-l {
+  box-sizing: border-box;
+  padding: $space-m $space-l;
+}
+
+.inset-stretch-s {
+  box-sizing: border-box;
+  padding: $space-s $space-xs;
+}
+
+.inset-stretch-m {
+  box-sizing: border-box;
+  padding: $space-m $space-s;
+}
+
+.stack-xs {
+  margin-bottom: $space-xs;
+}
+
+.stack-s {
+  margin-bottom: $space-s;
+}
+
+.stack-m {
+  margin-bottom: $space-m;
+}
+
+.stack-l {
+  margin-bottom: $space-l;
+}
+
+.stack-xl {
+  margin-bottom: $space-xl;
+}
+
+.inline-xs {
+  margin-right: $space-xs;
+}
+
+.inline-s {
+  margin-right: $space-s;
+}
+
+.inline-m {
+  margin-right: $space-m;
+}
+
+.inline-l {
+  margin-right: $space-l;
+}
+
+.inline-xl {
+  margin-right: $space-xl;
+}
 
 
 @mixin respond-to($media) {
