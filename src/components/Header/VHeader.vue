@@ -4,7 +4,7 @@
             {{ this.label }}
         </h1>
         <!-- <img class="logo" src="/src/assets/elipse-logo.png"> -->
-        <img class="logo" src="@/assets/img/elipse-logo.png"/>
+        <img class="logo" src="../../assets/elipse-logo.png"/>
     </div>
 </template>
 
