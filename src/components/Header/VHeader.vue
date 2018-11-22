@@ -3,8 +3,8 @@
         <h1 class="v-label">
             {{ this.label }}
         </h1>
-        <!-- <img src="../../assets/elipse-logo.png"> -->
-        eLIPSE logo
+        <!-- <img class="logo" src="/src/assets/elipse-logo.png"> -->
+        <img class="logo" src="@/assets/img/elipse-logo.png"/>
     </div>
 </template>
 
@@ -37,6 +37,10 @@ export default {
 
 .v-label {
     color: $white;
+}
+
+.logo {
+    height: 2rem;
 }
 
 </style>

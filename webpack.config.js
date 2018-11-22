@@ -11,6 +11,7 @@ module.exports = {
         filename: 'bundle.js',
         libraryTarget: 'umd',
         library: 'VueComponentLibrary',
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -24,6 +25,11 @@ module.exports = {
                         // other preprocessors should work out of the box, no loader config like this necessary.
                         'scss': 'vue-style-loader!css-loader!sass-loader',
                         'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+                    },
+                    transformAssetUrls: {
+                        source: "src",
+                        img: "src",
+                        image: "xlink:href",
                     }
                 }
             },
@@ -36,11 +42,16 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
+                test: /\.(png|jpe?g|gif)(\?.*)?$/,
+                loader: "url-loader",
                 options: {
-                    name: '[name].[ext]?[hash]'
-                }
+                    limit: 10000,
+                    name: "assets/img/[name].[hash:7].[ext]",
+                },
+            },
+            {
+                test: /\.svg$/,
+                loader: "html-loader",
             },
             {
                 test: /\.(scss|css)$/,
@@ -59,7 +70,8 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js', '.vue', '.json'],
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': path.join(__dirname, "..", "src")
         }
     }
 }
