@@ -11,7 +11,7 @@ module.exports = {
         filename: 'bundle.js',
         libraryTarget: 'umd',
         library: 'VueComponentLibrary',
-        publicPath: "/"
+        publicPath: "/node_modules/@uq-elipse/vue-component-library/src/" // this changes the image src path once it's bundled
     },
     module: {
         rules: [
@@ -43,10 +43,9 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)(\?.*)?$/,
-                loader: "url-loader",
+                loader: "file-loader",
                 options: {
-                    limit: 10000,
-                    name: "assets/img/[name].[hash:7].[ext]",
+                    name: "assets/img/[name].[ext]",    // this configures what the image src path should be once it is bundled, this is appended to the publicPath above
                 },
             },
             {
@@ -71,7 +70,7 @@ module.exports = {
         extensions: ['.ts', '.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '@': path.join(__dirname, "..", "src")
+            '@': path.join(__dirname, "src")    // this helps webpack understand the paths in code before bundling
         }
     }
 }
