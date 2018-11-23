@@ -6,7 +6,8 @@
       "moduleResolution": "node",
       "declaration": true,
       "sourceMap": true,
-      "outDir": "."
+      "outDir": ".",
+      "experimentalDecorators": true
   },
   "include": [
       "./src/**/*"

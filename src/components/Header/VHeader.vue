@@ -8,16 +8,16 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'v-header',
-    props: {
-        label: {
-            default: 'Project Name',
-            type: String
-        }
-    }
-};
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+import { Prop } from "vue-property-decorator";
+
+@Component
+export default class VHeader extends Vue {
+    @Prop({ default: "Project Name"})
+    label!: String;
+}
 </script>
 
 <style lang="scss" scoped>
