@@ -1,7 +1,7 @@
 <template>
     <div class="v-bg">
         <h1 class="v-label">
-            {{ this.label }}
+            {{ label }}
         </h1>
         <!-- <img src="../../assets/elipse-logo.png"> -->
         eLIPSE logo
@@ -15,7 +15,7 @@ import { Prop } from "vue-property-decorator";
 
 @Component
 export default class VHeader extends Vue {
-    @Prop({ default: "Project Name"})
+    @Prop({ default: "Project Name" })
     label!: String;
 }
 </script>
