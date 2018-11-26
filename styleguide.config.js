@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
     title: 'eLIPSE Design System',
+    styleguideDir: '/docs',
     exampleMode: 'expand',
     usageMode: 'expand',
     pagePerSection: true,
