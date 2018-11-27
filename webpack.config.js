@@ -11,6 +11,7 @@ module.exports = {
         filename: 'bundle.js',
         libraryTarget: 'umd',
         library: 'VueComponentLibrary',
+        libraryExport: 'default'
     },
     module: {
         rules: [

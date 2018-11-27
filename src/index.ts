@@ -6,8 +6,8 @@ import _Typography from "./components/_Typography"
 
 import Header from "./components/Header"
 
-export default {
-  install (Vue : any) {
+const VueComponentLibrary = {
+  install (Vue : any, options? : any) {
     Vue.component('colors', _Colors);
     Vue.component('other-styling', _OtherStyling);
     Vue.component('spacing', _Spacing);
@@ -16,3 +16,5 @@ export default {
     Vue.component('v-header', Header);
   }
 }
+
+export { VueComponentLibrary };
