@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "../../mixins.scss";
 
 .v-bg {
@@ -37,6 +38,7 @@ export default {
 
 .v-label {
     color: $white;
+    font-family: 'Open Sans', sans-serif;
 }
 
 </style>
