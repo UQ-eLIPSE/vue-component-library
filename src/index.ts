@@ -17,4 +17,4 @@ const VueComponentLibrary = {
   }
 }
 
-export { VueComponentLibrary };
+export default VueComponentLibrary;
