@@ -9,6 +9,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserSecret)
+
 export default {
     name: 'v-header',
     props: {
@@ -16,6 +23,9 @@ export default {
             default: 'Project Name',
             type: String
         }
+    },
+    components: {
+        'font-awesome-icon': FontAwesomeIcon
     }
 };
 </script>

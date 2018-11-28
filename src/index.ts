@@ -5,6 +5,7 @@ import _Spacing from "./components/_Spacing"
 import _Typography from "./components/_Typography"
 
 import Header from "./components/Header"
+import Icon from "./components/Icon"
 
 export default {
   install (Vue : any) {
@@ -14,5 +15,6 @@ export default {
     Vue.component('typography', _Typography);
     
     Vue.component('v-header', Header);
+    Vue.component('v-icon', Icon);
   }
 }
