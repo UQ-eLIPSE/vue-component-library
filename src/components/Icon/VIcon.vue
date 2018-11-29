@@ -1,5 +1,5 @@
 <template>
-    <font-awesome-icon v-bind:icon="iconType" v-bind:size="iconSize" />
+    <font-awesome-icon :class="color" :icon="iconType" :size="iconSize" />
 </template>
 
 <script>
@@ -25,6 +25,13 @@ export default {
             default: 's',
             validator: function (value) {
                 return ['xs','s','m','l','xl'].indexOf(value) !== -1
+            }
+        },
+        color: {
+            type: String,
+            default: 'primary',
+            validator: function (value) {
+                return ['primary','secondary','danger','warning'].indexOf(value) !== -1
             }
         }
     },
@@ -98,5 +105,20 @@ export default {
 <style lang="scss" scoped>
 @import "../../mixins.scss";
 
+.primary {
+    color: $primary;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.danger {
+    color: $danger;
+}
+
+.warning {
+    color: $warning;
+}
 
 </style>
