@@ -1,5 +1,5 @@
 <template>
-    <font-awesome-icon v-bind:icon="iconType" />
+    <font-awesome-icon v-bind:icon="iconType" v-bind:size="iconSize" />
 </template>
 
 <script>
@@ -13,10 +13,6 @@ library.add(faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload,
 export default {
     name: 'v-header',
     props: {
-        label: {
-            type: String,
-            default: 'Project Name'
-        },
         type: {
             type: String,
             required: true,
@@ -26,7 +22,10 @@ export default {
         },
         size: {
             type: String,
-            default: 'm'
+            default: 's',
+            validator: function (value) {
+                return ['xs','s','m','l','xl'].indexOf(value) !== -1
+            }
         }
     },
     components: {
@@ -69,6 +68,28 @@ export default {
                     break;
             }
             return iconType;
+        },
+        iconSize: function() {
+            let iconSize = '';
+
+            switch (this.size) {
+                case 'xs':
+                    iconSize = 'xs';
+                    break;
+                case 's':
+                    iconSize = 'sm';
+                    break;
+                case 'm':
+                    iconSize = 'lg';
+                    break;
+                case 'l':
+                    iconSize = '2x';
+                    break;
+                case 'xl':
+                    iconSize = '5x';
+                    break;
+            }
+            return iconSize;
         }
     }
 };
