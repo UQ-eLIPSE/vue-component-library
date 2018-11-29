@@ -12,6 +12,9 @@ module.exports = {
         libraryTarget: 'umd',
         library: 'VueComponentLibrary',
     },
+    externals: {
+        'vue': 'vue'
+    },
     module: {
         rules: [
             {
