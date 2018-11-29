@@ -1,0 +1,181 @@
+/* BASE
+--------------------------------------------- */
+
+// Background of page
+div.rsg--root-1 {
+    background: #ffffff;
+}
+
+// Main content
+main[class^="rsg--content"] {
+    display: block; /* IE11 fix */
+    padding: 0 90px 16px 90px;
+    max-width: none;
+}
+
+// Resetting margins for Styleguidist
+header[class^="rsg--header"] > div[class^="rsg--wrapper"],
+section > div[class^="rsg--wrapper"] + article[class^="rsg--root"],
+article[class^="rsg--root"] div[class^="rsg--root"] {
+    margin: 0 !important;
+}
+
+// Display rsg--roots as flex
+main section section > div > div[class^="rsg--root"] {
+    display: flex;
+    flex-direction: column;
+}
+
+// Heading styles
+h1[class^="rsg--heading"] {
+    font-size: 36px;
+}
+
+h2[class^="rsg--heading"] {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+// Main headings
+// (includes h2 as well since in component views that’s the first heading)
+div[class^="rsg--wrapper"] > h1[class^="rsg--heading"],
+div[class^="rsg--wrapper"] > h2[class^="rsg--heading"] {
+    display: block;
+    border: 0;
+    line-height: 1.3;
+    padding: 64px 90px;
+    font-weight: normal;
+    width: calc(100% + 180px);
+    margin: -#{0} -#{90px} 48px -#{90px};
+    background: #f7f7f7;
+    font-size: 40px;
+    a:hover {
+    text-decoration: none;
+    cursor: default;
+    }
+}
+
+// Remove extra margins from all headers
+header[class^="rsg--header"] {
+    margin: 0;
+}
+
+/* SIDEBAR
+--------------------------------------------- */
+
+// Sidebar logo
+div[class^="rsg--logo"] {
+    border-bottom: 1px solid #ffffff;
+    h1 {
+      color: #ffffff;
+      font-size: 24px;
+    }
+}
+
+div[class^="rsg--sidebar"] {
+    background: rgb(0,132,132);
+    background: linear-gradient(180deg, rgb(0,132,132) 35%, rgba(0,81,81,1) 100%);
+    border: 0;
+}
+
+/* HIDE ITEMS
+--------------------------------------------- */
+
+div[class^="rsg--tabButtons"],
+div[class^="rsg--controls"],
+div[class^="rsg--pathline"],
+footer[class^="rsg--footer"],
+article[class^="rsg--root"] > p[class^="rsg--para"],
+div[class^="rsg--toolbar"] {
+    display: none !important;
+}
+
+/* TABLES
+--------------------------------------------- */
+
+// Global tr setting so that vueds custom components use this as well
+tr {
+    transition: background-color 0.1s ease;
+    &:hover {
+        background: #c8ffff;
+    }
+}
+  
+table[class^="rsg--table"] {
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    th {
+        padding: 16px 48px 16px 16px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 0;
+        background: #c8ffff;
+        color: tint(#515456, 10%);
+        text-align: left;
+    }
+    th[class^="rsg--cellHeading"],
+    td {
+        padding: 16px 48px 16px 16px;
+        background: transparent;
+    }
+    td {
+        font-size: 13px;
+        padding: 16px 48px 16px 16px;
+        &:first-child {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+    }
+    tr {
+        border-bottom: 1px solid tint(#c9cbcc, 50%);
+    }
+    tbody tr:last-child {
+        border-bottom: 0;
+    }
+}
+
+thead[class^="rsg--thead"] {
+    th:first-child {
+        border-top-left-radius: 1px;
+        border-bottom-left-radius: 1px;
+    }
+    th:last-child {
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
+    }
+}
+
+// Code highlighting elsewhere
+span[class^="rsg--type"],
+code[class^="rsg--code"] {
+    color: #94989b;
+}
+span[class^="rsg--name"] code[class^="rsg--code"],
+code.name {
+    font-weight: bold;
+    color: #008484;
+}
+span[class^="rsg--type"] code[class^="rsg--code"],
+code.type {
+    background: #f7f7f7;
+    color: #515456;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+// Here we’re setting a custom order for Styleguidist’s pieces
+header[class^="rsg--header"] {
+    order: 1;
+  }
+  div[class^="rsg--docs"],
+  article[class^="rsg--root"],
+  button[class^="rsg--button"] {
+    order: 2;
+  }
+  div[class^="rsg--root"] div[class^="rsg--tabs"] {
+    order: 3;
+  }

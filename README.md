@@ -36,9 +36,15 @@ npm link @uq-elipse/vue-component-library
 For more information on npm link, see: https://medium.com/@alexishevia/the-magic-behind-npm-link-d94dcb3a81af
 
 ## Usage
+In your main.ts or main.js file, add this before the new Vue instance is created
 ```bash
 import Vue from 'vue'
 import VueComponentLibrary from '@uq-elipse/vue-component-library'
 
 Vue.use(VueComponentLibrary)
+```
+
+If using a Typescript app, create a file in src/ called ```vue-component-library.d.ts``` and add to it
+```bash
+declare module "@uq-elipse/vue-component-library"
 ```
