@@ -1,5 +1,5 @@
 Component Example:
 
 ```vue
-<v-header/>
+<v-header logo="dist/elipse-logo.png" />
 ```

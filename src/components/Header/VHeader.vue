@@ -3,7 +3,7 @@
         <h1 class="v-label">
             {{ this.label }}
         </h1>
-        <img class="logo" src="../../assets/elipse-logo.png"/>
+        <img class="logo" :src="this.logo" />
     </div>
 </template>
 
@@ -14,6 +14,10 @@ export default {
         label: {
             default: 'Project Name',
             type: String
+        },
+        logo: {
+            type: String,
+            required: true
         }
     }
 };
