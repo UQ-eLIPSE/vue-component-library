@@ -9,15 +9,18 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
-import { Prop } from "vue-property-decorator";
+import Vue, { VueConstructor } from "vue";
 
-@Component
-export default class VHeader extends Vue {
-    @Prop({ default: "Project Name" })
-    label!: String;
-}
+const VHeader = Vue.extend( {
+    name: 'v-header',
+    props: {
+        label: {
+            default: 'Project Name',
+            type: String
+        }
+    }
+});
+export default VHeader;
 </script>
 
 <style lang="scss" scoped>
