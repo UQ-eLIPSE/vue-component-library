@@ -61,7 +61,7 @@ module.exports = {
             }
         ]
     },
-    mode: 'development',
+    mode: 'production',
     plugins: [
         new VueLoaderPlugin()
     ],
