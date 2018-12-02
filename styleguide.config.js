@@ -13,6 +13,11 @@ module.exports = {
             sectionDepth: 1
         },
         {
+            name: 'UPDATING DOCS',
+            content: 'updatingDocs.md',
+            sectionDepth: 1
+        },
+        {
             name: 'FOUNDATION STYLES',
             content: 'foundationStyles.md',
             components: 'src/components/_*/*.vue',
