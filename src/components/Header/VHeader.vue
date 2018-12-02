@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { VueConstructor } from "vue";
 
 const VHeader = Vue.extend({
     name: 'VHeader',
