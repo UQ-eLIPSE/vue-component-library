@@ -10,6 +10,57 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload, faArrowsAlt, faCheck, faMinusSquare, faPlusSquare)
 
+const iconObjects = {
+    add: {
+        faIconType: 'plus'
+    },
+    delete: {
+        faIconType: 'trash-alt'
+    },
+    help: {
+        faIconType: 'question'
+    },
+    settings: {
+        faIconType: 'cog'
+    },
+    upload: {
+        faIconType: 'file-upload'
+    },
+    download: {
+        faIconType: 'file-download'
+    },
+    move: {
+        faIconType: 'arrows-alt'
+    },
+    tick: {
+        faIconType: 'check'
+    },
+    collapse: {
+        faIconType: 'minus-square'
+    },
+    expand: {
+        faIconType: 'plus-square'
+    }
+}
+
+const iconSizes = {
+    xs: {
+        faIconSize: 'xs'
+    },
+    s: {
+        faIconSize: 'sm'
+    },
+    m: {
+        faIconSize: 'lg'
+    },
+    l: {
+        faIconSize: '2x'
+    },
+    xl: {
+        faIconSize: '5x'
+    }
+}
+
 export default {
     name: 'v-header',
     props: {
@@ -17,21 +68,21 @@ export default {
             type: String,
             required: true,
             validator: function (value) {
-                return ['add','delete','help','settings','upload','download','move','tick','collapse','expand'].indexOf(value) !== -1
+                return Object.keys(iconObjects).indexOf(value) !== -1
             }
         },
         size: {
             type: String,
             default: 's',
             validator: function (value) {
-                return ['xs','s','m','l','xl'].indexOf(value) !== -1
+                return Object.keys(iconSizes).indexOf(value) !== -1
             }
         },
         color: {
             type: String,
             default: 'primary',
             validator: function (value) {
-                return ['primary','secondary','danger','warning'].indexOf(value) !== -1
+                return ['primary','secondary','danger','warning','black','white'].indexOf(value) !== -1
             }
         }
     },
@@ -40,63 +91,20 @@ export default {
     },
     computed: {
         iconType: function() {
-            let iconType = '';
-
-            switch (this.type) {
-                case 'add':
-                    iconType = 'plus';
-                    break;
-                case 'delete':
-                    iconType = 'trash-alt';
-                    break;
-                case 'help':
-                    iconType = 'question';
-                    break;
-                case 'settings':
-                    iconType = 'cog';
-                    break;
-                case 'upload':
-                    iconType = 'file-upload';
-                    break;
-                case 'download':
-                    iconType = 'file-download';
-                    break;
-                case 'move':
-                    iconType = 'arrows-alt';
-                    break;
-                case 'tick':
-                    iconType = 'check';
-                    break;
-                case 'collapse':
-                    iconType = 'minus-square';
-                    break;
-                case 'expand':
-                    iconType = 'plus-square';
-                    break;
+            const obj = iconObjects[this.type];
+            if(obj) {
+                return obj.faIconType;
+            } else {
+                return "";
             }
-            return iconType;
         },
         iconSize: function() {
-            let iconSize = '';
-
-            switch (this.size) {
-                case 'xs':
-                    iconSize = 'xs';
-                    break;
-                case 's':
-                    iconSize = 'sm';
-                    break;
-                case 'm':
-                    iconSize = 'lg';
-                    break;
-                case 'l':
-                    iconSize = '2x';
-                    break;
-                case 'xl':
-                    iconSize = '5x';
-                    break;
+            const obj = iconSizes[this.size];
+            if(obj) {
+                return obj.faIconSize;
+            } else {
+                return "";
             }
-            return iconSize;
         }
     }
 };
@@ -119,6 +127,14 @@ export default {
 
 .warning {
     color: $warning;
+}
+
+.black {
+    color: $black;
+}
+
+.white {
+    color: $white;
 }
 
 </style>
