@@ -38,7 +38,7 @@ export default {
 
 .v-label {
     color: $white;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
 }
 
 </style>
