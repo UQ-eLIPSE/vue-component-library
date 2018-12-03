@@ -2,15 +2,24 @@
     <font-awesome-icon :class="color" :icon="iconType" :size="iconSize" />
 </template>
 
-<script>
-import Vue from 'vue'
+<script lang="ts">
+import Vue, { VueConstructor } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload, faArrowsAlt, faCheck, faMinusSquare, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload, faArrowsAlt, faCheck, faMinusSquare, faPlusSquare)
 
-const iconObjects = {
+// Create map of icon type to FA type string
+interface IconTypeObject {
+    faIconType: string
+};
+
+interface IconTypeMap {
+    [index: string]: IconTypeObject;
+};
+
+let iconObjects: IconTypeMap = {
     add: {
         faIconType: 'plus'
     },
@@ -43,7 +52,16 @@ const iconObjects = {
     }
 }
 
-const iconSizes = {
+// Create map of icon size to FA size string
+interface IconSizeObject {
+    faIconSize: string
+}
+
+interface IconSizeMap {
+    [index: string]: IconSizeObject;
+}
+
+let iconSizes: IconSizeMap = {
     xs: {
         faIconSize: 'xs'
     },
@@ -61,27 +79,28 @@ const iconSizes = {
     }
 }
 
-export default {
-    name: 'v-header',
+// Icon component
+const VIcon = Vue.extend({
+    name: 'VIcon',
     props: {
         type: {
             type: String,
             required: true,
-            validator: function (value) {
+            validator: function (value: string) {
                 return Object.keys(iconObjects).indexOf(value) !== -1
             }
         },
         size: {
             type: String,
             default: 's',
-            validator: function (value) {
+            validator: function (value: string) {
                 return Object.keys(iconSizes).indexOf(value) !== -1
             }
         },
         color: {
             type: String,
             default: 'primary',
-            validator: function (value) {
+            validator: function (value: string) {
                 return ['primary','secondary','danger','warning','black','white'].indexOf(value) !== -1
             }
         }
@@ -107,7 +126,9 @@ export default {
             }
         }
     }
-};
+});
+
+export default VIcon;
 </script>
 
 <style lang="scss" scoped>

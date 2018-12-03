@@ -8,9 +8,9 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist/'),
-        filename: 'bundle.js',
+        filename: 'index.js',
         libraryTarget: 'umd',
-        library: 'VueComponentLibrary',
+        library: 'VueComponentLibrary'
     },
     externals: {
         'vue': 'vue'
@@ -27,6 +27,11 @@ module.exports = {
                         // other preprocessors should work out of the box, no loader config like this necessary.
                         'scss': 'vue-style-loader!css-loader!sass-loader',
                         'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+                    },
+                    transformAssetUrls: {
+                        source: "src",
+                        img: "src",
+                        image: "xlink:href",
                     }
                 }
             },
@@ -39,11 +44,15 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
+                test: /\.(png|jpe?g|gif)(\?.*)?$/,
+                loader: "file-loader",
                 options: {
-                    name: '[name].[ext]?[hash]'
-                }
+                    name: "[name].[ext]",    // this configures what the image src path should be once it is bundled, this is appended to the publicPath above
+                },
+            },
+            {
+                test: /\.svg$/,
+                loader: "html-loader",
             },
             {
                 test: /\.(scss|css)$/,
@@ -55,7 +64,7 @@ module.exports = {
             }
         ]
     },
-    mode: 'production',
+    mode: 'development',
     plugins: [
         new VueLoaderPlugin()
     ],

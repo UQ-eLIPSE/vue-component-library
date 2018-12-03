@@ -44,7 +44,3 @@ import VueComponentLibrary from '@uq-elipse/vue-component-library'
 Vue.use(VueComponentLibrary)
 ```
 
-If using a Typescript app, create a file in src/ called ```vue-component-library.d.ts``` and add to it
-```bash
-declare module "@uq-elipse/vue-component-library"
-```
