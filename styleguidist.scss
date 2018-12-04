@@ -159,7 +159,7 @@ span[class^="rsg--type"],
 code[class^="rsg--code"] {
     color: #94989b;
 }
-span[class^="rsg--name"] code[class^="rsg--code"],
+span[class^="rsg--name"] code[class^="rsg--code"],code[class^="rsg--name"],
 code.name {
     font-weight: bold;
     color: #008484;
