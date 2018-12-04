@@ -39,6 +39,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .row {
     display: flex;
@@ -60,6 +65,10 @@ export default {
 
 .white {
     color: $white;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
 }
 
 </style>

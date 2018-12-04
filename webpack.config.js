@@ -8,9 +8,12 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist/'),
-        filename: 'bundle.js',
+        filename: 'index.js',
         libraryTarget: 'umd',
         library: 'VueComponentLibrary'
+    },
+    externals: {
+        'vue': 'vue'
     },
     module: {
         rules: [
@@ -61,7 +64,7 @@ module.exports = {
             }
         ]
     },
-    mode: 'development',
+    mode: 'production',
     plugins: [
         new VueLoaderPlugin()
     ],

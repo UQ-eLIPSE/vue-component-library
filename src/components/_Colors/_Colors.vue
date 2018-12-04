@@ -60,6 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .outerContainer {
     background: $white;
@@ -85,6 +86,7 @@ export default {
     align-items: center;
     text-align: center;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .primary-lighter {
