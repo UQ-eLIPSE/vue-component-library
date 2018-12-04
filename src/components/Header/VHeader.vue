@@ -12,7 +12,7 @@
 import Vue, { VueConstructor } from "vue";
 
 const VHeader = Vue.extend({
-    name: 'VHeader',
+    name: 'v-header',
     props: {
         label: {
             default: 'Project Name',

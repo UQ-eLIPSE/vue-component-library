@@ -1,5 +1,5 @@
 Component Example:
 
 ```vue
-<VHeader />
+<v-header />
 ```

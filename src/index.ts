@@ -9,7 +9,7 @@ import VHeader from "./components/Header"
 
 const VueComponentLibrary: PluginObject<_Vue> = {
   install: (Vue: typeof _Vue, options?: any) => {
-    Vue.component('VHeader', VHeader);
+    Vue.component('v-header', VHeader);
     Vue.component('colors', _Colors);
     Vue.component('other-styling', _OtherStyling);
     Vue.component('spacing', _Spacing);
