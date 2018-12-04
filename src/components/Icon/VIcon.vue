@@ -79,7 +79,7 @@ let iconSizes: IconSizeMap = {
 
 // Icon component
 const VIcon = Vue.extend({
-    name: 'VIcon',
+    name: 'v-icon',
     props: {
         type: {
             type: String,

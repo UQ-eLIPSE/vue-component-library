@@ -7,6 +7,11 @@ Library of Vue components adhering to eLIPSE design system. This is in the form 
 npm install @uq-elipse/vue-component-library
 ```
 
+Components in the library do not have fonts included, so that fonts set by the consumer can automatically be applied. For consistency with the eLIPSE Design System, we expect consumers to set the font-family of their app to:
+```css
+font-family: 'Open Sans', 'Helvetica', sans-serif;
+```
+
 ## Installation (when doing development work)
 First, create your test Vue app
 ```bash

@@ -15,8 +15,8 @@ const VueComponentLibrary: PluginObject<_Vue> = {
     Vue.component('spacing', _Spacing);
     Vue.component('typography', _Typography);
 
-    Vue.component('VHeader', VHeader);
-    Vue.component('VIcon', VIcon);
+    Vue.component('v-header', VHeader);
+    Vue.component('v-icon', VIcon);
   }
 }
 

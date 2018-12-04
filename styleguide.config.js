@@ -30,7 +30,7 @@ module.exports = {
             linkHover: '#c8ffff'
         },
         fontFamily: {
-            base: ["'Open Sans'", "Helvetica", "Arial", "sans-serif"]
+            base: ["'Open Sans'", "Helvetica", "sans-serif"]
         }
     },
     require: [
