@@ -8,8 +8,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload, faArrowsAlt, faCheck, faMinusSquare, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload, faArrowsAlt, faCheck, faMinusSquare, faPlusSquare)
-
 // Create map of icon type to FA type string
 interface IconTypeObject {
     faIconType: string
@@ -125,6 +123,9 @@ const VIcon = Vue.extend({
                 return "";
             }
         }
+    },
+    created: function () {
+        library.add(faPlus, faTrashAlt, faQuestion, faCog, faFileUpload, faFileDownload, faArrowsAlt, faCheck, faMinusSquare, faPlusSquare);
     }
 });
 

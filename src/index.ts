@@ -16,7 +16,7 @@ const VueComponentLibrary: PluginObject<_Vue> = {
     Vue.component('typography', _Typography);
 
     Vue.component('VHeader', VHeader);
-    Vue.component('VHeader', VIcon);
+    Vue.component('VIcon', VIcon);
   }
 }
 
