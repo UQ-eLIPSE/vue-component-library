@@ -1,3 +1,11 @@
-tsconfig.json
+docs
+node_modules
+src
+.gitignore
+foundationStyles.md
 package-lock.json
+postcss.config.js
+styleguide.config.js
+styleguidist.scss
+tsconfig.json
 webpack.config.js

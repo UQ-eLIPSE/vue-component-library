@@ -35,15 +35,21 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .row {
     display: flex;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .b {
     height: 2rem;
-    width: 3rem;
+    width: 5rem;
     margin: 0.5rem 0;
 }
 
