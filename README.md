@@ -2,7 +2,7 @@
 
 Library of Vue components adhering to eLIPSE design system. This is in the form of a node module, however the version on npm is not the most recent update stored on GitHub, so please look below for using the most recent version in development.
 
-## Installation (when not doing development work)
+## Installation (to use library in your project)
 ```bash
 npm install @uq-elipse/vue-component-library
 ```
@@ -12,7 +12,9 @@ Components in the library do not have fonts included, so that fonts set by the c
 font-family: 'Open Sans', 'Helvetica', sans-serif;
 ```
 
-## Installation (when doing development work)
+## Installation (to work on library development)
+IMPORTANT: Development on the library does not work when testing locally with a Babel project using npm link
+
 First, create your test Vue app
 ```bash
 mkdir ~/Desktop/my-project
@@ -49,3 +51,5 @@ import VueComponentLibrary from '@uq-elipse/vue-component-library'
 Vue.use(VueComponentLibrary)
 ```
 
+## Releasing an update to the library
+Please refer to the file `release.md` for instructions.
