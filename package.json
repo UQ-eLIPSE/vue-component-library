@@ -1,6 +1,6 @@
 {
   "name": "@uq-elipse/vue-component-library",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Library of Vue components adhering to eLIPSE design system",
