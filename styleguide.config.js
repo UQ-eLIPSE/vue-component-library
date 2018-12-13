@@ -18,6 +18,11 @@ module.exports = {
             sectionDepth: 1
         },
         {
+            name: 'RELEASES',
+            content: 'release.md',
+            sectionDepth: 1
+        },
+        {
             name: 'FOUNDATION STYLES',
             content: 'foundationStyles.md',
             components: 'src/components/_*/*.vue',
